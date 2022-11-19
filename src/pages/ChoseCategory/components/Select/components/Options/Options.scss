@@ -1,0 +1,57 @@
+.options {
+  position: absolute;
+  top: 44px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  width: 100%;
+  margin-top: 4px;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #ced4d9;
+  box-sizing: border-box;
+  animation: optionsAppearanceAnimation 0.3s ease-in-out;
+
+  &__item {
+    display: flex;
+    padding: 8px 16px;
+    color: #38495f;
+    font-size: 14px;
+    line-height: 20px;
+    transition: 0.3s;
+    border: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: #ef807f;
+      color: #fff;
+      cursor: pointer;
+      outline: none;
+    }
+
+    &_active {
+      color: #ef807f;
+
+      &:hover {
+        background-color: transparent;
+        color: #ef807f;
+      }
+    }
+
+    &_empty {
+      pointer-events: none;
+    }
+  }
+}
+
+@keyframes optionsAppearanceAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
