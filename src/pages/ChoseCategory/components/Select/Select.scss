@@ -1,0 +1,53 @@
+.select {
+  position: relative;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 44px;
+    padding: 0 0 0 10px;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid #ced4d9;
+    color: #38495f;
+    font-size: 14px;
+    line-height: 14px;
+    transition: 0.3s;
+
+    &:hover {
+      border-color: #ef807f;
+
+      .select__controlArrow {
+        border-color: #ef807f;
+      }
+    }
+  }
+
+  &__controlArrow {
+    min-width: 50px;
+    height: 100%;
+    border-left: 1px solid #ced4d9;
+    box-shadow: -1px 0px 6px 0 #dde1e6;
+
+    &::before {
+      content: ' ';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("./arrow.svg") no-repeat center;
+      background-size: 12px;
+      transition: 0.3s;
+    }
+
+    &_rotated {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
